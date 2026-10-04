@@ -7,7 +7,7 @@ import {
   XAxis,
   YAxis,
   Cell,
-  LabelList 
+  LabelList // <-- این حتما باید اضافه شود
 } from 'recharts';
 import '../../styles/comparison.css';
 // import SectionGuide from '../ui/SectionGuide.jsx';
