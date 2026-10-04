@@ -1,0 +1,140 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(15, 0, 26, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(144, 0, 255, 0.25);
+  overflow: hidden;
+}
+
+/* بک‌گراند نوری تصویر auth-bg */
+.header-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 900px;
+  height: 220px;
+  background-image: url('/auth-bg.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 0 16px rgba(144, 0, 255, 0.6));
+}
+
+.header-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* استایل بلوک برندینگ سمت چپ */
+.framer-1kr9e98 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.framer-i5dli9 h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.framer-k5a9wr h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #D299FF;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.framer-1p7fqs1 {
+  position: relative;
+  width: 110px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* بخش سمت راست و دکمه CTA */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-social-link {
+  color: rgba(210, 153, 255, 0.8);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header-social-link:hover {
+  color: #ffffff;
+}
+
+.btn-partner-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #9000FF 0%, #6B00B6 100%);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(210, 153, 255, 0.4);
+  box-shadow: 0 0 16px rgba(144, 0, 255, 0.35);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-partner-call:hover {
+  background: linear-gradient(135deg, #A824FF 0%, #7900D6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(144, 0, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #00FF88;
+  box-shadow: 0 0 8px #00FF88;
+}
+
+@media (max-width: 640px) {
+  .header-social-link {
+    display: none;
+  }
+  .framer-1p7fqs1 {
+    width: 90px;
+  }
+  .btn-partner-call {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}

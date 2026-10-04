@@ -1,0 +1,58 @@
+.insight h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0 0 32px;
+  max-width: 16ch;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.insight-body {
+  color: var(--color-muted);
+  font-size: 17px;
+  margin-bottom: 16px;
+  max-width: 38em;
+}
+
+.insight-grid img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--color-line);
+}
+
+.insight-quote {
+  margin-top: 48px;
+  padding: 28px;
+  border-left: 3px solid var(--color-primary);
+  background: rgba(144, 0, 255, 0.08);
+}
+
+.insight-quote p {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+}
+
+.insight-quote cite {
+  display: block;
+  margin-top: 16px;
+  color: var(--color-secondary);
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+}

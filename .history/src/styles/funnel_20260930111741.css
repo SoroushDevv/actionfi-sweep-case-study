@@ -1,0 +1,38 @@
+.funnel h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0 0 40px;
+  max-width: 16ch;
+}
+
+.funnel-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.funnel-steps li {
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+  border-radius: 999px;
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.funnel-note {
+  margin-top: 28px;
+  color: var(--color-muted);
+  max-width: 36em;
+}
+
+@media (max-width: 800px) {
+  .funnel-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}

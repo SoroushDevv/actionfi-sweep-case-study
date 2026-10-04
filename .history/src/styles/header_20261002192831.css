@@ -1,0 +1,119 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(15, 0, 26, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(144, 0, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 12px;
+}
+
+.logo-am {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-separator {
+  color: rgba(210, 153, 255, 0.4);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.brand-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary, #D299FF);
+  background: rgba(144, 0, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(144, 0, 255, 0.3);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: var(--color-muted, rgba(210, 153, 255, 0.8));
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(144, 0, 255, 0.15);
+}
+
+.sweep-partner-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: rgba(26, 5, 42, 0.8);
+  border: 1px solid rgba(144, 0, 255, 0.3);
+  border-radius: 9999px;
+  margin-left: 8px;
+}
+
+.sweep-partner-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(210, 153, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.logo-sweep {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .brand-separator,
+  .brand-tag,
+  .sweep-partner-label {
+    display: none;
+  }
+
+  .header-nav {
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}

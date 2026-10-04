@@ -1,0 +1,48 @@
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.chart-card {
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.chart-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 16px;
+}
+
+.chart-frame {
+  height: 280px;
+}
+
+.chart-note {
+  margin-top: 12px;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.chart-tip {
+  background: #0f001a;
+  border: 1px solid #9000ff;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  display: grid;
+  gap: 4px;
+}
+
+@media (max-width: 800px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}

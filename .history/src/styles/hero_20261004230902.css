@@ -1,0 +1,301 @@
+.hero {
+  padding-top: 80px;
+  padding-bottom: 64px;
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+    background:white ;
+    border-radius:16px
+ 
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+  }
+}
+
+/* ستون سمت چپ: تایپوگرافی و آمار */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.eyebrow {
+  color: var(--color-secondary, #D299FF);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+}
+
+.hero-title-primary {
+
+   display: block;
+  margin-top: 6px;
+color:#000;
+  font-size: 48px;
+ back-ground:#9000FF;
+}
+
+.hero-title-accent {
+  display: block;
+  color: #000;
+  font-size: 45px;
+
+}
+
+.lede {
+  max-width: 34em;
+  color: var(--color-muted, rgba(210, 153, 255, 0.75));
+  font-size: 17px;
+  line-height: 1.55;
+  margin-bottom: 40px;
+}
+.hero-metrics-container {
+  margin-top: 36px;
+  position: relative;
+  background: linear-gradient(180deg, rgba(26, 5, 42, 0.7) 0%, rgba(15, 0, 26, 0.9) 100%);
+  border: 1px solid rgba(144, 0, 255, 0.35);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(210, 153, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* گوشه‌های کادر فنی (HUD Corner Accents) */
+.hero-metrics-container::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  width: 40px;
+  height: 2px;
+  background: #D299FF;
+  box-shadow: 0 0 10px #D299FF;
+}
+
+.hero-metrics-container::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: 20px;
+  width: 40px;
+  height: 2px;
+  background: #9000FF;
+  box-shadow: 0 0 10px #9000FF;
+}
+
+/* نوار سربرگ بالای کادر */
+.metrics-hud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(144, 0, 255, 0.15);
+}
+
+.hud-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-live-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #00FF88;
+  box-shadow: 0 0 8px #00FF88;
+  animation: pulseLive 2s infinite ease-in-out;
+}
+
+@keyframes pulseLive {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.hud-title {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary, #D299FF);
+}
+
+.hud-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(144, 0, 255, 0.25);
+  border: 1px solid rgba(144, 0, 255, 0.4);
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* شبکه کارت‌های ۳ تایی درون کادر */
+.hero-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* کارت‌های داخلی */
+.hero-metric-cell {
+  background: rgba(18, 1, 31, 0.7);
+  border: 1px solid rgba(144, 0, 255, 0.2);
+  border-radius: 14px;
+  padding: 16px 14px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.hero-metric-cell:hover {
+  border-color: rgba(210, 153, 255, 0.5);
+  background: rgba(26, 5, 42, 0.9);
+  transform: translateY(-2px);
+}
+
+.hero-metric-cell.featured {
+  border-color: rgba(144, 0, 255, 0.6);
+  background: linear-gradient(180deg, rgba(38, 7, 61, 0.8) 0%, rgba(18, 1, 31, 0.9) 100%);
+  box-shadow: 0 0 20px rgba(144, 0, 255, 0.15);
+}
+
+/* عدد فوق‌العاده بولد دورنگ */
+.hero-metric-val {
+  display: block;
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-secondary, #D299FF) 55%, var(--color-primary, #9000FF) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.hero-metric-cell.featured .hero-metric-val {
+  filter: drop-shadow(0 0 10px rgba(144, 0, 255, 0.4));
+}
+
+/* برچسب زیر عدد */
+.hero-metric-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted, rgba(210, 153, 255, 0.75));
+  text-transform: capitalize;
+}
+
+.metric-check-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(144, 0, 255, 0.25);
+  color: var(--color-secondary, #D299FF);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background:transparent;
+}
+
+.hero-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  /* border: 1px solid rgba(144, 0, 255, 0.35); */
+  /* box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 32px rgba(144, 0, 255, 0.15); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-scene-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-visual-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(15, 0, 26, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(210, 153, 255, 0.35);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00FF88;
+  box-shadow: 0 0 6px #00FF88;
+}
+
+.badge-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

@@ -1,0 +1,39 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(15, 0, 26, 0.86);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 24px;
+}
+
+.logo-am {
+  height: 28px;
+  width: auto;
+}
+
+.logo-sweep {
+  height: 24px;
+  width: auto;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+.header-nav a:hover {
+  color: var(--color-white);
+}

@@ -1,0 +1,171 @@
+.hero {
+  padding-top: 80px;
+  padding-bottom: 64px;
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+  }
+}
+
+/* ستون سمت چپ: تایپوگرافی و آمار */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.eyebrow {
+  color: var(--color-secondary, #D299FF);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+}
+
+.hero-title-primary {
+  display: block;
+  color: #ffffff;
+  font-size: smaller;
+}
+
+.hero-title-accent {
+  display: block;
+  margin-top: 6px;
+  background: linear-gradient(135deg, var(--color-secondary, #D299FF) 0%, var(--color-primary, #9000FF) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lede {
+  max-width: 34em;
+  color: var(--color-muted, rgba(210, 153, 255, 0.75));
+  font-size: 17px;
+  line-height: 1.55;
+  margin-bottom: 40px;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-line, rgba(144, 0, 255, 0.2));
+}
+
+.hero-metrics strong {
+  display: block;
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-primary, #9000FF);
+}
+
+.hero-metrics strong.highlight {
+  color: var(--color-secondary, #D299FF);
+}
+
+.hero-metrics span {
+  color: var(--color-muted, rgba(210, 153, 255, 0.75));
+  font-size: 13px;
+  display: block;
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .hero-metrics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ستون سمت راست: فریم تصویر مربعی */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1 / 1;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(144, 0, 255, 0.35);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 32px rgba(144, 0, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-scene-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* برچسب سناریو روی تصویر */
+.hero-visual-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(15, 0, 26, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(210, 153, 255, 0.35);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00FF88;
+  box-shadow: 0 0 6px #00FF88;
+}
+
+.badge-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

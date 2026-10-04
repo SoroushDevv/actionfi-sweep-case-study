@@ -1,0 +1,10 @@
+:root {
+  --color-primary: #9000ff;
+  --color-secondary: #d299ff;
+  --color-white: #ffffff;
+  --color-bg: #0f001a;
+  --color-muted: #8b8096;
+  --color-line: rgba(210, 153, 255, 0.18);
+  --font: Inter, system-ui, sans-serif;
+  --max: 1120px;
+}

@@ -1,0 +1,65 @@
+.comparison h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0 0 40px;
+  max-width: 16ch;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.compare-col {
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.compare-col h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.is-quest h3,
+.is-quest li {
+  color: var(--color-muted);
+}
+
+.is-action {
+  border-color: var(--color-primary);
+}
+
+.is-action h3,
+.is-action li {
+  color: var(--color-white);
+}
+
+.compare-col ul {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.compare-col li {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-line);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.compare-col li:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+@media (max-width: 700px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}

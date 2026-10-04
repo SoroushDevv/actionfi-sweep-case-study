@@ -1,0 +1,95 @@
+@media (pointer: fine) {
+  body, a, button, [role="button"] {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #D299FF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #D299FF, 0 0 20px #9000FF;
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+
+.custom-cursor-dot.has-badge {
+  opacity: 0;
+}
+
+.custom-cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(144, 0, 255, 0.4) 0%, rgba(144, 0, 255, 0.05) 60%, transparent 100%);
+  border: 1px solid rgba(210, 153, 255, 0.35);
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: opacity 0.2s ease;
+}
+
+.custom-cursor-trail.has-badge {
+  opacity: 0.2;
+}
+
+/* بج لوگوی چسبیده به موس */
+.cursor-brand-badge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: rgba(15, 0, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(144, 0, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(144, 0, 255, 0.3);
+  transform: translate(16px, 16px); /* قرارگیری با فاصله متناسب از نوک موس */
+  will-change: transform;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.15s ease-out;
+  opacity: 0;
+}
+
+.cursor-brand-badge.visible {
+  opacity: 1;
+}
+
+.cursor-brand-badge img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.cursor-brand-badge span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.cursor-brand-badge.sweep span {
+  color: #D299FF;
+}
+
+.cursor-brand-badge.actionfi span {
+  color: #ffffff;
+}

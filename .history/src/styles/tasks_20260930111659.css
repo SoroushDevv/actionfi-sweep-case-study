@@ -1,0 +1,54 @@
+.tasks h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0 0 40px;
+  max-width: 16ch;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.task-card {
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 180px;
+}
+
+.task-index {
+  display: block;
+  color: var(--color-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+
+.task-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.task-card p {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.task-card strong {
+  color: var(--color-primary);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 800px) {
+  .task-grid {
+    grid-template-columns: 1fr;
+  }
+}
