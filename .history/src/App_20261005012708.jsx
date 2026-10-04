@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import Header from "./components/layout/Header.jsx";
 import Hero from "./components/sections/Hero.jsx";
 import Funnel from "./components/sections/Funnel.jsx";
